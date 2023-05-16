@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.rectorlee.mapper.RefundInfoMapper">
+    <resultMap id="RefundInfoResult" type="top.rectorlee.entity.RefundInfo">
+        <result property="id" column="id" />
+        <result property="refundNo" column="refund_no" />
+        <result property="refundId" column="refund_id" />
+        <result property="totalFee" column="total_fee" />
+        <result property="refund" column="refund" />
+        <result property="reason" column="reason" />
+        <result property="refundStatus" column="refund_status" />
+        <result property="contentReturn" column="content_return" />
+        <result property="contentNotify" column="content_notify" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <insert id="insertRefundInfo" parameterType="top.rectorlee.entity.RefundInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into t_refund_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null">order_no,</if>
+            <if test="refundNo != null">refund_no,</if>
+            <if test="refundId != null">refund_id,</if>
+            <if test="totalFee != null">total_fee,</if>
+            <if test="refund != null">refund,</if>
+            <if test="reason != null">reason,</if>
+            <if test="refundStatus != null">refund_status,</if>
+            <if test="contentReturn != null">content_return,</if>
+            <if test="contentNotify != null">content_notify,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null">#{orderNo},</if>
+            <if test="refundNo != null">#{refundNo},</if>
+            <if test="refundId != null">#{refundId},</if>
+            <if test="totalFee != null">#{totalFee},</if>
+            <if test="refund != null">#{refund},</if>
+            <if test="reason != null">#{reason},</if>
+            <if test="refundStatus != null">{refundStatus},</if>
+            <if test="contentReturn != null">#{contentReturn},</if>
+            <if test="contentNotify != null">#{contentNotify},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+    <select id="selectByRefundNo" parameterType="string" resultMap="RefundInfoResult">
+        select * from t_refund_info where refund_no = #{refundNo}
+    </select>
+
+    <update id="updateRefundInfo" parameterType="top.rectorlee.entity.RefundInfo">
+        update t_refund_info
+        <trim prefix="set" suffixOverrides=",">
+            <if test="orderNo != null">order_no = #{orderNo},</if>
+            <if test="refundNo != null">refund_no = #{refundNo},</if>
+            <if test="refundId != null">refund_id = #{refundId},</if>
+            <if test="totalFee != null">total_fee = #{totalFee},</if>
+            <if test="refund != null">refund = #{refund},</if>
+            <if test="reason != null">reason = #{reason},</if>
+            <if test="refundStatus != null">refund_status = #{refundStatus},</if>
+            <if test="contentReturn != null">content_return = #{contentReturn},</if>
+            <if test="contentNotify != null">content_notify = #{contentNotify},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+</mapper>

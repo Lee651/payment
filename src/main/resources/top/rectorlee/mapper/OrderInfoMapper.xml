@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.rectorlee.mapper.OrderInfoMapper">
+    <resultMap id="OrderResult" type="top.rectorlee.entity.OrderInfo">
+        <result property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="orderNo" column="order_no" />
+        <result property="userId" column="user_id" />
+        <result property="productId" column="product_id" />
+        <result property="paymentType" column="payment_type" />
+        <result property="totalFee" column="total_fee" />
+        <result property="codeUrl" column="code_url" />
+        <result property="orderStatus" column="order_status" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <update id="updateOrder" parameterType="top.rectorlee.entity.OrderInfo">
+        update t_order_info
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null">title = #{title},</if>
+            <if test="orderNo != null">order_no = #{orderNo},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="productId != null">product_id = #{productId},</if>
+            <if test="paymentType != null">payment_type = #{paymentType},</if>
+            <if test="totalFee != null">total_fee = #{totalFee},</if>
+            <if test="codeUrl != null">code_url = #{codeUrl},</if>
+            <if test="orderStatus != null">order_status = #{orderStatus},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <select id="selectByProductIdAndUserId" resultMap="OrderResult">
+        select * from t_order_info where product_id = #{productId} and user_id = #{userId} and order_status = #{orderStatus}
+    </select>
+
+    <insert id="insertOrderInfo" parameterType="top.rectorlee.entity.OrderInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into t_order_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">title,</if>
+            <if test="orderNo != null">order_no,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="productId != null">product_id,</if>
+            <if test="paymentType != null">payment_type,</if>
+            <if test="totalFee != null">total_fee,</if>
+            <if test="codeUrl != null">code_url,</if>
+            <if test="orderStatus != null">order_status,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null">#{title},</if>
+            <if test="orderNo != null">#{orderNo},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="productId != null">#{productId},</if>
+            <if test="paymentType != null">#{paymentType},</if>
+            <if test="totalFee != null">#{totalFee},</if>
+            <if test="codeUrl != null">#{codeUrl},</if>
+            <if test="orderStatus != null">#{orderStatus},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+    <update id="saveCodeUrlByOrderNo">
+        update t_order_info set code_url = #{codeUrl} where order_no = #{orderNo}
+    </update>
+
+    <update id="updateOrderStatusByOrderNo">
+        update t_order_info set order_status = #{orderStatus} where order_no = #{orderNo}
+    </update>
+
+    <select id="selectOrderStatusByOrderNo" parameterType="string" resultType="string">
+        select order_status from t_order_info where order_no = #{orderNo}
+    </select>
+
+    <select id="selectOrderList" resultMap="OrderResult">
+        select * from t_order_info
+    </select>
+
+    <select id="selectUnpaidOrderList" parameterType="string" resultMap="OrderResult">
+        select * from t_order_info where order_status = '未支付' where payment_type = #{paymentType}
+    </select>
+
+    <select id="selectByOrderNo" parameterType="string" resultMap="OrderResult">
+        select * from t_order_info where order_no = #{orderNo}
+    </select>
+</mapper>

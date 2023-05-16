@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51b9304d-e8a0-4437-ac53-6d35401933de" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/top/rectorlee/service/impl/WxNativePayServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.6.3\repository" />
+        <option name="mavenHome" value="D:\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="2PJyCIUGMezvz9lYf0Iu1yJpRDU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/code/payment",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "f83c2a85d972a89238f31296c63f0dbc",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="top.rectorlee.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\payment\src\main\java\top\rectorlee\interfacelimit\others" />
+      <recent name="D:\code\payment\src\main\java\top\rectorlee\exception" />
+      <recent name="D:\code\payment\src\main\java\top\rectorlee" />
+      <recent name="D:\code\payment\src\main\java\top\rectorlee\config" />
+      <recent name="D:\code\payment\src\main\java\top\rectorlee\aop" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="top.rectorlee.utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PaymentApplication">
+    <configuration name="AllTest.testAliPay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="payment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.rectorlee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.rectorlee" />
+      <option name="MAIN_CLASS_NAME" value="top.rectorlee.AllTest" />
+      <option name="METHOD_NAME" value="testAliPay" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="payment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.rectorlee.PaymentApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.rectorlee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PaymentApplication" />
+        <item itemvalue="JUnit.AllTest.testAliPay" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51b9304d-e8a0-4437-ac53-6d35401933de" name="Changes" comment="" />
+      <created>1683189351245</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683189351245</updated>
+      <workItem from="1683189352454" duration="8248000" />
+      <workItem from="1683198937774" duration="4492000" />
+      <workItem from="1683206273185" duration="569000" />
+      <workItem from="1683206853759" duration="28000" />
+      <workItem from="1683206981756" duration="65000" />
+      <workItem from="1683207140832" duration="100000" />
+      <workItem from="1683207391966" duration="298000" />
+      <workItem from="1683207713387" duration="572000" />
+      <workItem from="1683208329880" duration="1662000" />
+      <workItem from="1683210101007" duration="320000" />
+      <workItem from="1683210600951" duration="177000" />
+      <workItem from="1683212230610" duration="361000" />
+      <workItem from="1683256264033" duration="2929000" />
+      <workItem from="1683265868176" duration="11336000" />
+      <workItem from="1683279738247" duration="1017000" />
+      <workItem from="1683280767142" duration="6814000" />
+      <workItem from="1683292358197" duration="73000" />
+      <workItem from="1683295453351" duration="29000" />
+      <workItem from="1683298672145" duration="10000" />
+      <workItem from="1683307260835" duration="1978000" />
+      <workItem from="1683341543248" duration="20271000" />
+      <workItem from="1683384090364" duration="6584000" />
+      <workItem from="1683430948791" duration="40730000" />
+      <workItem from="1683517269618" duration="5285000" />
+      <workItem from="1683524591172" duration="23426000" />
+      <workItem from="1683598339947" duration="29506000" />
+      <workItem from="1683697276263" duration="11474000" />
+      <workItem from="1683718072175" duration="176000" />
+      <workItem from="1683718266758" duration="726000" />
+      <workItem from="1683771997684" duration="42000" />
+      <workItem from="1683772051884" duration="11252000" />
+      <workItem from="1683793189758" duration="4179000" />
+      <workItem from="1683802110583" duration="1384000" />
+      <workItem from="1683860022337" duration="11000" />
+      <workItem from="1683861229392" duration="46000" />
+      <workItem from="1683865284333" duration="1356000" />
+      <workItem from="1683900097950" duration="4399000" />
+      <workItem from="1684204216719" duration="791000" />
+      <workItem from="1684228835277" duration="291000" />
+      <workItem from="1684242403863" duration="151000" />
+      <workItem from="1684242977030" duration="389000" />
+      <workItem from="1684243371791" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.pem" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.yml" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

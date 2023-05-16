@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.rectorlee.mapper.PaymentInfoMapper">
+    <insert id="insertPaymentInfo" parameterType="top.rectorlee.entity.PaymentInfo">
+        insert into t_payment_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null">order_no,</if>
+            <if test="transactionId != null">transaction_id,</if>
+            <if test="paymentType != null">payment_type,</if>
+            <if test="tradeType != null">trade_type,</if>
+            <if test="tradeState != null">trade_state,</if>
+            <if test="payerTotal != null">payer_total,</if>
+            <if test="content != null">content,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null">#{orderNo},</if>
+            <if test="transactionId != null">#{transactionId},</if>
+            <if test="paymentType != null">#{paymentType},</if>
+            <if test="tradeType != null">#{tradeType},</if>
+            <if test="tradeState != null">#{tradeState},</if>
+            <if test="payerTotal != null">#{payerTotal},</if>
+            <if test="content != null">#{content},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+</mapper>
