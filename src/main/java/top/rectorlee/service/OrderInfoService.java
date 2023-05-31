@@ -35,7 +35,7 @@ public interface OrderInfoService {
     /**
      * 查询订单列表
      */
-    RestResult selectOrderList();
+    RestResult selectOrderList() throws Exception;
 
     /**
      * 根据订单号取消订单

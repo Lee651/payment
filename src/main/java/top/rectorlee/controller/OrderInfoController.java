@@ -30,7 +30,7 @@ public class OrderInfoController {
 
     @ApiOperation(value = "订单列表")
     @GetMapping("/list")
-    public RestResult selectOrderList() {
+    public RestResult selectOrderList() throws Exception {
         return orderInfoService.selectOrderList();
     }
 }

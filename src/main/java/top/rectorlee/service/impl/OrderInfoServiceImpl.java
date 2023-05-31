@@ -3,20 +3,17 @@ package top.rectorlee.service.impl;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import top.rectorlee.entity.OrderInfo;
-import top.rectorlee.entity.PaymentInfo;
-import top.rectorlee.entity.Product;
+import org.springframework.util.CollectionUtils;
+import top.rectorlee.entity.*;
 import top.rectorlee.enums.OrderStatus;
 import top.rectorlee.enums.PayType;
-import top.rectorlee.mapper.OrderInfoMapper;
-import top.rectorlee.mapper.PaymentInfoMapper;
-import top.rectorlee.mapper.ProductMapper;
+import top.rectorlee.mapper.*;
 import top.rectorlee.service.OrderInfoService;
-import top.rectorlee.utils.HttpStatus;
-import top.rectorlee.utils.OrderNoUtils;
-import top.rectorlee.utils.RestResult;
+import top.rectorlee.utils.*;
 
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
@@ -35,6 +32,10 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
     @Autowired
     private PaymentInfoMapper paymentInfoMapper;
+
+    @Autowired
+    @Qualifier("asyncExecutor")
+    private TaskExecutor taskExecutor;
 
     private final ReentrantLock lock = new ReentrantLock();
 
@@ -163,11 +164,58 @@ public class OrderInfoServiceImpl implements OrderInfoService {
     }
 
     @Override
-    public RestResult selectOrderList() {
+    public RestResult selectOrderList() throws Exception{
         List<OrderInfo> list = orderInfoMapper.selectOrderList();
         log.info("订单列表为: {}", list);
 
+        // 异步输出所有订单信息
+        // asyncTask(list);
+        // log.info(asyncTask(list).get());
+        asyncTask(list);
+
         return new RestResult<>(HttpStatus.SUCCESS, "订单列表查询成功", list, list.size());
+    }
+
+    /**
+     * 异步调用方式一
+     */
+    /*@Async
+    public void asyncTask(List<OrderInfo> list) {
+        if (!CollectionUtils.isEmpty(list)) {
+            for (int i = 0; i < list.size(); i++) {
+                log.info("订单{}信息为: {}", i + 1, list.get(i));
+            }
+        }
+    }*/
+
+    /**
+     * 异步调用方式二
+     */
+    /*public CompletableFuture<String> asyncTask(List<OrderInfo> list) {
+        return CompletableFuture.supplyAsync(() -> {
+            if (!CollectionUtils.isEmpty(list)) {
+                for (int i = 0; i < list.size(); i++) {
+                    log.info("订单{}信息为: {}", i + 1, list.get(i));
+                }
+
+                return "异步任务执行完成";
+            }
+
+            return "集合为空";
+        });
+    }*/
+
+    /**
+     * 异步调用方式三
+     */
+    public void asyncTask(List<OrderInfo> list) {
+        taskExecutor.execute(() -> {
+            if (!CollectionUtils.isEmpty(list)) {
+                for (int i = 0; i < list.size(); i++) {
+                    log.info("订单{}信息为: {}", i + 1, list.get(i));
+                }
+            }
+        });
     }
 
     @Transactional
