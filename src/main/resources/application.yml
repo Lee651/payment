@@ -10,6 +10,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
+    # url: jdbc:mysql://my-db:3306/payment?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     url: jdbc:mysql://localhost:3306/payment?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: li123456
@@ -19,6 +20,7 @@ spring:
         port: 8719
         dashboard: localhost:8088
   redis:
+    # host: 192.168.126.137
     host: localhost
     password: li123456
     port: 6379

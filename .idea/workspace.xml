@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b9304d-e8a0-4437-ac53-6d35401933de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/rectorlee/config/AsyncConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/rectorlee/PaymentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/rectorlee/PaymentApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/rectorlee/controller/OrderInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/rectorlee/controller/OrderInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/rectorlee/service/OrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/rectorlee/service/OrderInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/rectorlee/service/impl/OrderInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/rectorlee/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +94,10 @@
       <recent name="D:\code\payment\src\main\java\top\rectorlee" />
       <recent name="D:\code\payment\src\main\java\top\rectorlee\config" />
       <recent name="D:\code\payment\src\main\java\top\rectorlee\aop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\payment" />
+      <recent name="D:\code\payment\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.rectorlee.utils" />
@@ -193,7 +194,9 @@
       <workItem from="1684242977030" duration="389000" />
       <workItem from="1684243371791" duration="5000" />
       <workItem from="1684243607313" duration="22000" />
-      <workItem from="1685534598150" duration="3506000" />
+      <workItem from="1685534598150" duration="4071000" />
+      <workItem from="1685675482751" duration="5396000" />
+      <workItem from="1685697224468" duration="6068000" />
     </task>
     <servers />
   </component>
