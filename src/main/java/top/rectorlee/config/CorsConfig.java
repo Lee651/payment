@@ -1,7 +1,6 @@
 package top.rectorlee.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -11,7 +10,7 @@ import org.springframework.web.filter.CorsFilter;
  * @description 跨域配置类: 添加该配置类后所有的接口就不再需要添加@CrossOrigin注解了
  * @date 2023-07-16 14:00:05
  */
-@Configuration
+// @Configuration
 public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
