@@ -81,7 +81,7 @@
     </select>
 
     <select id="selectUnpaidOrderList" parameterType="string" resultMap="OrderResult">
-        select * from t_order_info where order_status = '未支付' where payment_type = #{paymentType}
+        select * from t_order_info where order_status = '未支付' and payment_type = #{paymentType}
     </select>
 
     <select id="selectByOrderNo" parameterType="string" resultMap="OrderResult">
